@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.first-line {
+    font-size: 2rem;
+}
