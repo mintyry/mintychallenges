@@ -1,3 +1,4 @@
+/* could put margin:0 to remove space around entire page */
 /* holds all of the content for challenge: align text to image */
 /* flex makes it responsive, and has img and text containers next to each other. To have them on top but also be flex, use flex-direction: column. The image will be centered because its container is flex center, but the text goes to the left because its width is only at 900 px, not the entire possible width of the page. add align-items center to actually center the text-container  */
 #subject {
@@ -35,3 +36,12 @@
 .first-line {
     font-size: 2rem;
 }
+
+@media screen and (max-width: 899px) {
+    #text-container {
+        width: 100%;
+    }
+    #dragon {
+        width: 100%;
+    }
+  }
