@@ -7,7 +7,26 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
 }
+/* promo tet banner at top */
+#promo-text {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(143, 188, 168);
+  color: blanchedalmond;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* using > targets DIRECT children. Without it, it would affect any p or span within promo text */
+#promo-text > p > span {
+  font-size: 20px;
+}
+
+/* section that holds hero image and text columns */
 #subject {
     display: flex;
     flex-direction: column;
@@ -31,7 +50,7 @@
 }
 /* to shift middle and right columns */
 #t-two, #t-three {
-    padding-left: 8rem;
+    padding-left: 1rem;
 }
 
 .text {
