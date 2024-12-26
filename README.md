@@ -10,3 +10,9 @@ He even pointed out that I'm a coder, and I should know this. Bullocks, I say!
 As my mentor taught me: developers can achieve anything! (Just don't tell clients this.)  
 ### Bonus: make responsive on tablet and mobile
 ### Bonus: make it look nice
+
+## Second challenge: 
+Client once wanted a banner to change text every amount of seconds, which I was allowed to do for them myself.
+I'd like to get simple js practice and make this again.
+
+### Bonus: make an input field that allows users to edit the subsequent texts
