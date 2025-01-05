@@ -11,8 +11,10 @@ As my mentor taught me: developers can achieve anything! (Just don't tell client
 ### Bonus: make responsive on tablet and mobile
 ### Bonus: make it look nice
 
-## Second challenge: 
+## Second challenge: ✅
 Client once wanted a banner to change text every amount of seconds, which I was allowed to do for them myself.
 I'd like to get simple js practice and make this again.
+
+Lesson: Good refresher with setInterval. I tend to stray away from modulo operator because the logic of dividing AND THEN using the value of a remainder isn't natural to me, but it was useful here.
 
 ### Bonus: make an input field that allows users to edit the subsequent texts
