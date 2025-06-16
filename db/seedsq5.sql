@@ -5,9 +5,9 @@ VALUES
     ('Svendson, Stephen'),
     ('Petterson, Kari');
 
-INSERT INTO Orders (Prod_Id, Product, Employee_ID)
+INSERT INTO Salary (Salary)
 VALUES
-    (234, 'Printer', 01),
-    (657, 'Table', 03),
-    (865, 'Chair', 03);
-
+    (10000),
+    (4000),
+    (15000),
+    (8000);

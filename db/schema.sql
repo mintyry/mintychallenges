@@ -12,3 +12,8 @@ CREATE TABLE Orders (
     Product VARCHAR(30),
     Employee_ID INT
 );
+
+CREATE TABLE Salary (
+    Employee_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Salary INT NOT NULL
+);
