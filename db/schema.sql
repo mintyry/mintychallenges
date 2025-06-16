@@ -13,7 +13,7 @@ CREATE TABLE Orders (
     Employee_ID INT
 );
 
-CREATE TABLE Salary (
+CREATE TABLE Salaries (
     Employee_ID INT AUTO_INCREMENT PRIMARY KEY,
     Salary INT NOT NULL
 );

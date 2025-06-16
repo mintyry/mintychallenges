@@ -5,7 +5,7 @@ VALUES
     ('Svendson, Stephen'),
     ('Petterson, Kari');
 
-INSERT INTO Salary (Salary)
+INSERT INTO Salaries (Salary)
 VALUES
     (10000),
     (4000),
