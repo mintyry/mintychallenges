@@ -21,7 +21,7 @@
 
 -- note from ryan: this is a self join exanple
 
-SELECT o.name
+SELECT o.name as employee
 from Employee o
 LEFT JOIN Employee t on o.managerId = t.id
 WHERE o.managerID IS NOT NULL AND o.salary > t.salary
