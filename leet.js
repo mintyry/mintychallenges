@@ -4,10 +4,10 @@
 
 // You can return the answer in any order.
 
-eg: [1,5,7,9,14]
-target: 16
+// eg: [1,5,7,9,14]
+// target: 16
 
-so we wanna find indices 2 and 3
+// so we wanna find indices 2 and 3
 
 var twoSum = function(nums, target) {
 
@@ -15,7 +15,10 @@ var twoSum = function(nums, target) {
     let target = 16;
 // (starting point, end point, how to increment)
     for (let i = 0; i < nums.length; i++) {
-i+
+      let indices =  nums[i] + nums[i+1];
+      if (indices === target) {
+        return target;
+      }
     }
     
 };
