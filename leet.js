@@ -17,10 +17,12 @@ var twoSum = function(nums, target) {
     for (let i = 0; i < nums.length; i++) {
       let indices =  nums[i] + nums[i+1];
       if (indices === target) {
-        return target;
+        return indices;
       }
     }
     
 };
 
 twoSum();
+
+// install node to run and test
