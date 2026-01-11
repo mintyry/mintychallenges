@@ -18,9 +18,9 @@ var twoSum = function(nums, target) {
       // first loop, i want to add 1+5, then next loop  1+7, then 9, etc.
       // the second integer needs to loop in the first loop
       for (let j = 1; j <nums.length; j++){
-        let potentialAnswer = i + j;
+        let potentialAnswer = nums[i] + [j];
         if (potentialAnswer === target) {
-          return  [i, j]
+          return  [i, j];
         }
       }
     }
