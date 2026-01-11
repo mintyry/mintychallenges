@@ -15,9 +15,13 @@ var twoSum = function(nums, target) {
     let target = 16;
 // (starting point, end point, how to increment)
     for (let i = 0; i < nums.length; i++) {
-      let indices =  nums[i] + nums[i+1];
-      if (indices === target) {
-        return indices;
+      // first loop, i want to add 1+5, then next loop  1+7, then 9, etc.
+      // the second integer needs to loop in the first loop
+      for (let j = 1; j <nums.length; j++){
+        let potentialAnswer = i + j;
+        if (potentialAnswer === target) {
+          return  [i, j]
+        }
       }
     }
     
