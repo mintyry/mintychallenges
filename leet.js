@@ -27,6 +27,6 @@ var twoSum = function(nums, target) {
     
 };
 
-twoSum();
-
 // install node to run and test
+
+// NEED TO ADD VALUES FOR POTENTIAL ANSWER. RIGHT NOW IM ADDING INDICES
