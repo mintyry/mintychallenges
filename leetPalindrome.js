@@ -22,3 +22,23 @@ var isPalindrome = function (x) {
         return "Enter a number instead!"
     }
 };
+
+// just compare the reverse of the array since it should be the same backwards bc its a palindrome
+var isPalindrome = function (x) {
+    if (typeof x === "number") {
+        // num to string
+        let xString = x.toString();
+        // split up each character of the string and put into an array
+        let xArr = xString.split('');
+        let xArrReverse = xArr.reverse();
+        if (xArr === xArrReverse){
+            return "This is a palindrome!"
+        }
+        else {
+            return "This is not a palindrome."
+        }
+    }
+    else {
+        return "Enter a number instead!"
+    }
+};
