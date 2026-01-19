@@ -29,21 +29,29 @@ var isPalindrome = function (x) {
         // num to string
         let xString = x.toString();
         // split up each character of the string and put into an array
+        console.log('this is a string: ' + xString )
         let xArr = xString.split('');
            // found out .reverse() doesn't return a new array, so this is ineffective since original and reversed array will always be the same
         //    array is reversed, no make it a string to compare to original string
+           console.log('this is an array: ' + xArr )
         let xArrReverse = xArr.reverse();
         // use .join to turn array back to string; .toString would include the commas; cannot remove them
+           console.log('this is the array reversed: ' + xArrReverse )
         let reverseString = xArrReverse.join('')
+        console.log('this is the string reversed: ' + reverseString )
      
-        if (xString=== reverseString){
-            return "This is a palindrome!"
+        if (xString === reverseString){
+          console.log('palindrome')
+            return true
         }
         else {
-            return "This is not a palindrome."
+          console.log('not palindrome')
+            return false
         }
     }
     else {
         return "Enter a number instead!"
     }
 };
+
+isPalindrome(1221);
