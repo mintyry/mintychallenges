@@ -16,12 +16,18 @@ var isPalindrome = function (x) {
         // split up each character of the string and put into an array
         let xArr = xString.split('');
         let lastChar = xArr.length - 1;
+        let midpoint = (xArr.length)/2;
         // not correct; try to make condition stop when we reach middle... but how?
-        for (let i = 0; i < xArr.length; i++) {
+        for (let i = 0; i < midpoint; i++) {
             // some logic
             if (xArr[i] === xArr[lastChar]) {
                 // eg: number is 12221
-                lastChar = lastChar - i - 1;
+                // update lastChar and keep looping to check if xArr[i] === xArr[updated lastChar]
+                lastChar = lastChar - 1;
+                // if index is the midpoint, it's done and all the checks passed, so run true
+                if (i = midpoint) {
+                    return true;
+                }
             }
             else {
                 return false;
