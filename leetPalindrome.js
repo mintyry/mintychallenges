@@ -6,6 +6,9 @@
 // second part of for loop is condition; loop will run as long this is true
 // dont need a nested loop because it will create a grid comparison; you dont need to compare one digit to every digit
 
+
+
+// initial attempt: compare character to character
 var isPalindrome = function (x) {
     if (typeof x === "number") {
         // num to string
@@ -14,8 +17,15 @@ var isPalindrome = function (x) {
         let xArr = xString.split('');
         let lastChar = xArr.length - 1;
         // not correct; try to make condition stop when we reach middle... but how?
-        for (let i = 0; xArr[i] === xArr[lastChar]; i++) {
+        for (let i = 0; i < xArr.length; i++) {
             // some logic
+            if (xArr[i] === xArr[lastChar]) {
+                // eg: number is 12221
+                lastChar = lastChar - i - 1;
+            }
+            else {
+                return false;
+            }
         }
     }
     else {
