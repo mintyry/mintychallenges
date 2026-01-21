@@ -25,14 +25,14 @@ var isPalindrome = function (x) {
                 // update lastChar and keep looping to check if xArr[i] === xArr[updated lastChar]
                 lastChar = lastChar - 1;
                 // if index is the midpoint, it's done and all the checks passed, so run true
-                if (i = midpoint) {
-                    return true;
-                }
             }
             else {
                 return false;
             }
+            
         }
+        // only returns true if loop completes
+        return true;
     }
     else {
         return "Enter a number instead!"
