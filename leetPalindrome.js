@@ -87,14 +87,34 @@ var isPalindrome = function (x) {
             // modulo would be 2
             // how to compare 1 to 2? remove the 2. how? use math.floor
             // 12/10 = 1.2 math.floor = 1
-            let removeLastDig = x/10;
+            let removeLastDig = x / 10;
             let firstDigs = Math.floor(removeLastDig);
+
             if (lastDig === firstDigs) {
                 // eg: 11
                 // modulo = 1
                 //  11/10 = Math.floor(1.1) = 1 === 1
                 return true
+                // problem, more digits
+                // 19991
+                // modulo = 1
+                // 1999/10 = Math.floor(199.9) = 199
+                // must keep looping this process
             }
+
+            do {
+                // ex: 19991
+                let lastDig = x % 10;
+                // 1
+                // 9
+                x = Math.floor(x / 10);
+                // 1999
+                // 199
+                if (lastDig === x) {
+                    return true
+                }
+            }
+            while (x > 0)
         }
     }
     else {
