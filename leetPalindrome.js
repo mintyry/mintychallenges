@@ -16,7 +16,7 @@ var isPalindrome = function (x) {
         // split up each character of the string and put into an array
         let xArr = xString.split('');
         let lastChar = xArr.length - 1;
-        let midpoint = (xArr.length)/2;
+        let midpoint = (xArr.length) / 2;
         // not correct; try to make condition stop when we reach middle... but how?
         for (let i = 0; i < midpoint; i++) {
             // some logic
@@ -28,7 +28,7 @@ var isPalindrome = function (x) {
             else {
                 return false;
             }
-            
+
         }
         // only returns true if loop completes
         return true;
@@ -66,3 +66,38 @@ var isPalindrome = function (x) {
 };
 
 isPalindrome(1221);
+
+// do this without converting to a string
+
+var isPalindrome = function (x) {
+    if (typeof x === "number") {
+        // if (xString === reverseString) {
+        //     console.log('palindrome')
+        //     return true
+        // }
+        // else {
+        //     console.log('not palindrome')
+        //     return false
+        // }
+        if (x < 0) {
+            return false
+        } else {
+            // pretend x = 12
+            let lastDig = x % 10;
+            // modulo would be 2
+            // how to compare 1 to 2? remove the 2. how? use math.floor
+            // 12/10 = 1.2 math.floor = 1
+            let removeLastDig = x/10;
+            let firstDigs = Math.floor(removeLastDig);
+            if (lastDig === firstDigs) {
+                // eg: 11
+                // modulo = 1
+                //  11/10 = Math.floor(1.1) = 1 === 1
+                return true
+            }
+        }
+    }
+    else {
+        return "Enter a number instead!"
+    }
+};
