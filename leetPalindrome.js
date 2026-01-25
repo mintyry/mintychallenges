@@ -74,46 +74,27 @@ var isPalindrome = function (x) {
         if (x < 0) {
             return false
         } else {
-            do {
             let arr = [];
-            // pretend x = 19991
-            arr.push(x % 10);
-            console.log ('this is what\'s in the array:' + arr);
-            // modulo would be 1
-            // how to compare 1 to 1999? remove the 1. how? use math.floor
-            // 12/10 = 1.2 math.floor = 1
-           x = Math.floor(x / 10);
-           console.log('new x?' + x);
-            // x is now 1999
-
-            // at this point, the array will be filled with each digit of the number backwards, then we can check the array with a for loop
-            } while (x > 0);
-
-            if (lastDig === firstDigs) {
-                // eg: 11
-                // modulo = 1
-                //  11/10 = Math.floor(1.1) = 1 === 1
-                return true
-                // problem, more digits
-                // 19991
-                // modulo = 1
-                // 1999/10 = Math.floor(199.9) = 199
-                // must keep looping this process
-            }
-
             do {
-                // ex: 19991
-                let lastDig = x % 10;
-                // 1
-                // 9
+                // pretend x = 19991
+                arr.push(x % 10);
+                // modulo would be 1
+                // how to compare 1 to 1999? remove the 1. how? use math.floor
+                // 12/10 = 1.2 math.floor = 1
                 x = Math.floor(x / 10);
-                // 1999
-                // 199
-                if (lastDig === x) {
-                    return true
+                // x is now 1999
+                // at this point, the array will be filled with each digit of the number backwards, then we can check the array with a for loop
+            } while (x > 0);
+            let lastChar = arr.length - 1;
+            let midpoint = arr.length / 2;
+            for (let i = 0; i < midpoint; i++) {
+                if (arr[i] === lastChar) {
+                    lastChar--;
+                } else {
+                    return false;
                 }
             }
-            while (x > 0)
+            return true;
         }
     }
     else {
