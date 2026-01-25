@@ -101,3 +101,16 @@ var isPalindrome = function (x) {
         return "Enter a number instead!"
     }
 };
+
+// TAKEAWAY LESSON:
+// According to leet code..
+
+// Solution 1 runs 13ms, beating 18% of all submissions
+
+// Solution 2 runs 103ms, beating 5% of all submissions
+
+// Solution 3 runs 3ms, beating 98% of all submissions
+// I wonder if the string conversion and reverse method takes more time for some reason
+// I told chatgpt this and without asking why, it already told me solution 2 is "built-in heavy," and it explained to me that although its less lines of code it uses 5 different methods
+// Looks short line-wise but is doing much more "under the hood"
+// Very interesting!!
