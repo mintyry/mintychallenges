@@ -76,19 +76,19 @@ var isPalindrome = function (x) {
         } else {
             let arr = [];
             do {
-                // pretend x = 19991
+                // pretend x = 121
                 arr.push(x % 10);
                 // modulo would be 1
                 // how to compare 1 to 1999? remove the 1. how? use math.floor
-                // 12/10 = 1.2 math.floor = 1
+                // 121/10 = 12.1 math.floor = 12
                 x = Math.floor(x / 10);
-                // x is now 1999
+                // x is now 12
                 // at this point, the array will be filled with each digit of the number backwards, then we can check the array with a for loop
             } while (x > 0);
             let lastChar = arr.length - 1;
             let midpoint = arr.length / 2;
             for (let i = 0; i < midpoint; i++) {
-                if (arr[i] === lastChar) {
+                if (arr[i] === arr[lastChar]) {
                     lastChar--;
                 } else {
                     return false;
