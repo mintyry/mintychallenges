@@ -71,24 +71,23 @@ isPalindrome(1221);
 
 var isPalindrome = function (x) {
     if (typeof x === "number") {
-        // if (xString === reverseString) {
-        //     console.log('palindrome')
-        //     return true
-        // }
-        // else {
-        //     console.log('not palindrome')
-        //     return false
-        // }
         if (x < 0) {
             return false
         } else {
-            // pretend x = 12
-            let lastDig = x % 10;
-            // modulo would be 2
-            // how to compare 1 to 2? remove the 2. how? use math.floor
+            do {
+            let arr = [];
+            // pretend x = 19991
+            arr.push(x % 10);
+            console.log ('this is what\'s in the array:' + arr);
+            // modulo would be 1
+            // how to compare 1 to 1999? remove the 1. how? use math.floor
             // 12/10 = 1.2 math.floor = 1
-            let removeLastDig = x / 10;
-            let firstDigs = Math.floor(removeLastDig);
+           x = Math.floor(x / 10);
+           console.log('new x?' + x);
+            // x is now 1999
+
+            // at this point, the array will be filled with each digit of the number backwards, then we can check the array with a for loop
+            } while (x > 0);
 
             if (lastDig === firstDigs) {
                 // eg: 11
