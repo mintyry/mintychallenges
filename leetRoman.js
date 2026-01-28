@@ -11,6 +11,15 @@
 // use .map 
 // Problem is simpler to solve by working the string from back to front and using a map.
 
-var romanToInt = function(s) {
-    
+var romanToInt = function (s) {
+    let romanNum = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+    if (!romanNum.includes(s)) {
+        console.log('That\'s not a Roman numeral!');
+        return 'That\'s not a Roman numeral!';
+    } else {
+        let I = romanNum[0];
+        console.log('I');
+    }
 };
+
+romanToInt('V');
