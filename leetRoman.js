@@ -19,6 +19,7 @@ var romanToInt = function (s) {
     } else {
         let I = romanNum[0];
         console.log('I');
+        // maybe map through the array and assign number instead
     }
 };
 
