@@ -20,6 +20,13 @@ var romanToInt = function (s) {
         let I = romanNum[0];
         console.log('I');
         // maybe map through the array and assign number instead
+
+        // make array of actual numbers and assign to roman array
+
+        // if s === I then s = 1
+        if (s === 'I') {
+            s = 1
+        }
     }
 };
 
