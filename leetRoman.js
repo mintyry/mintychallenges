@@ -13,20 +13,26 @@
 
 var romanToInt = function (s) {
     let romanNum = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+
     if (!romanNum.includes(s)) {
         console.log('That\'s not a Roman numeral!');
         return 'That\'s not a Roman numeral!';
     } else {
         let I = romanNum[0];
+        let V = romanNum[1];
+        let X = romanNum[2];
+        let L = romanNum[3];
+        let C = romanNum[4];
+        let D = romanNum[5];
+        let M = romanNum[6];
+
         console.log('I');
         // maybe map through the array and assign number instead
 
         // make array of actual numbers and assign to roman array
 
         // if s === I then s = 1
-        if (s === 'I') {
-            s = 1
-        }
+        
     }
 };
 
