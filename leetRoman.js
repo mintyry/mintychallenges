@@ -18,7 +18,7 @@ var romanToInt = function (s) {
         console.log('That\'s not a Roman numeral!');
         return 'That\'s not a Roman numeral!';
     } else {
-        let I = 'romanNum[0]';
+        let I = romanNum[0];
         let V = romanNum[1];
         let X = romanNum[2];
         let L = romanNum[3];
