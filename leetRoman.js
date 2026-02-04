@@ -32,6 +32,8 @@ var romanToInt = function (s) {
         // make array of actual numbers and assign to roman array
 
         // if s === I then s = 1
+
+        // maybe create an object
         
     }
 };
