@@ -12,21 +12,34 @@
 // Problem is simpler to solve by working the string from back to front and using a map.
 
 var romanToInt = function (s) {
-    let romanNum = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+    // let romanNum = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+    const romanNumerals = {
+            I: 1,
+            V: 5,
+            X: 10,
+            L: 50,
+            C: 100,
+            D: 500,
+            M: 1000
+        }
 
-    if (!romanNum.includes(s)) {
+    if (!romanNumerals.includes(s)) {
         console.log('That\'s not a Roman numeral!');
         return 'That\'s not a Roman numeral!';
     } else {
-        let I = romanNum[0];
-        let V = romanNum[1];
-        let X = romanNum[2];
-        let L = romanNum[3];
-        let C = romanNum[4];
-        let D = romanNum[5];
-        let M = romanNum[6];
+        // let I = romanNum[0];
+        // let V = romanNum[1];
+        // let X = romanNum[2];
+        // let L = romanNum[3];
+        // let C = romanNum[4];
+        // let D = romanNum[5];
+        // let M = romanNum[6];
 
-        console.log(I);
+        // console.log(I);
+
+
+        
+        console.log(romanNumerals.I);
         // maybe map through the array and assign number instead
 
         // make array of actual numbers and assign to roman array
@@ -38,4 +51,4 @@ var romanToInt = function (s) {
     }
 };
 
-romanToInt('V');
+romanToInt(V);
