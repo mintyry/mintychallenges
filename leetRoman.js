@@ -23,7 +23,8 @@ var romanToInt = function (s) {
             'M': 1000
         }
 
-        console.log(romanNumerals['V'])
+        console.log(romanNumerals[s]);
+        return romanNumerals[s];
 
     // will turn array key,value pairs into object
         //   const romanNumerals = [
