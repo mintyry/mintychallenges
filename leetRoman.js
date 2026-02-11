@@ -13,29 +13,34 @@
 
 var romanToInt = function (s) {
     // let romanNum = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
-    // const romanNumerals = {
-    //         I: 1,
-    //         V: 5,
-    //         X: 10,
-    //         L: 50,
-    //         C: 100,
-    //         D: 500,
-    //         M: 1000
-    //     }
+    const romanNumerals = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+
+        console.log(romanNumerals['V'])
 
     // will turn array key,value pairs into object
-          const romanNumerals = [
-            ['I', 1],
-            ['V', 5],
-            ['X', 10],
-            ['L', 50],
-            ['C', 100],
-            ['D', 500],
-            ['M', 1000]
-          ]
+        //   const romanNumerals = [
+        //     ['I', 1],
+        //     ['V', 5],
+        //     ['X', 10],
+        //     ['L', 50],
+        //     ['C', 100],
+        //     ['D', 500],
+        //     ['M', 1000]
+        //   ]
 
-        const romanObj = Object.fromEntries(romanNumerals);
-        
+        // const romanObj = Object.fromEntries(romanNumerals);
+        // romanObj['X'];
+// fromEntries() turns an array of [key, value] pairs back into an object.
+// entries() turns an object into an array of key, value paies
+
     // if (!romanNumerals.includes(s)) {
     //     console.log('That\'s not a Roman numeral!');
     //     return 'That\'s not a Roman numeral!';
