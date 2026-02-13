@@ -11,14 +11,24 @@
 // use .map 
 // Problem is simpler to solve by working the string from back to front and using a map.
 
+//learned:
+// if (Array.isArray(value)) {
+//   console.log("It's an array");
+// } 
+// else if (typeof value === "string") {
+//   console.log("It's a string");
+// }
+// else if (typeof value === "number") {
+//   console.log("It's a number");
+// }
+// else if (typeof value === "boolean") {
+//   console.log("It's a boolean");
+// }
+
+
 
 var romanToInt = function (s) {
-
-    if ( typeof s !== 'string' ) {
-        console.log('this isn\'t a roman numeral!')
-    } else {
-
-    const romanNumerals = {
+      const romanNumerals = {
             'I': 1,
             'V': 5,
             'X': 10,
@@ -26,8 +36,12 @@ var romanToInt = function (s) {
             'C': 100,
             'D': 500,
             'M': 1000
-        }
-
+        };
+// check if s exists in object, use bracket notation and it will look is s is any of the keys; it it does not, it will be undefined
+// NEXT: how about if multiple characters like XIV?
+    if ( romanNumerals[s] === undefined) {
+        console.log('this isn\'t a roman numeral!')
+    } else {
  // corredctly evaluates inidividual roman numerals
         console.log(romanNumerals[s]);
         return romanNumerals[s];
