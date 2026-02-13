@@ -11,8 +11,13 @@
 // use .map 
 // Problem is simpler to solve by working the string from back to front and using a map.
 
+
 var romanToInt = function (s) {
-    // let romanNum = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+
+    if ( typeof s !== 'string' ) {
+        console.log('this isn\'t a roman numeral!')
+    } else {
+
     const romanNumerals = {
             'I': 1,
             'V': 5,
@@ -23,10 +28,23 @@ var romanToInt = function (s) {
             'M': 1000
         }
 
+ // corredctly evaluates inidividual roman numerals
         console.log(romanNumerals[s]);
         return romanNumerals[s];
+// next, calculate multiple digit roman nums
 
-    // will turn array key,value pairs into object
+// if the string entered has more than one character, follow logic
+    }
+};
+
+romanToInt('V');
+
+
+
+
+
+//other code
+  // will turn array key,value pairs into object
         //   const romanNumerals = [
         //     ['I', 1],
         //     ['V', 5],
@@ -68,6 +86,3 @@ var romanToInt = function (s) {
     //     // maybe create an object
         
     // }
-};
-
-romanToInt(V);
