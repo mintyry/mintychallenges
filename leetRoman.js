@@ -43,16 +43,23 @@ var romanToInt = function (s) {
     if ( typeof s !== 'string') {
         console.log('this isn\'t a roman numeral!')
     } else {
- // corredctly evaluates inidividual roman numerals
+ // corredctly evaluates inidividual roman numerals from object
         // console.log(romanNumerals[s]);
-        // return romanNumerals[s];
+
 // next, calculate multiple digit roman nums
 
 // from right to left, if value is bigger than character to the left, subtract; if smaller, add.
 // need to access character specifically. example: XIV
 // how do i target V?
     const lastChar = s.charAt(s.length - 1);
-console.log(lastChar);
+console.log(`this is the last character: ${lastChar}`);
+// successfully found last character. need to loop to identify all characters, then check if they exist in the object.
+
+for (i = 1; i < s.length; i++) {
+    // start at 1, because we want to first find the last character first, which would be length - 1
+    let character = s.charAt(s.length - i)
+    console.log(`this is a character: ${character}`);
+}
 
 // if the string entered has more than one character, follow logic
     }
@@ -79,7 +86,7 @@ romanToInt('XIV');
         // const romanObj = Object.fromEntries(romanNumerals);
         // romanObj['X'];
 // fromEntries() turns an array of [key, value] pairs back into an object.
-// entries() turns an object into an array of key, value paies
+// entries() turns an object into an array of key, value pairs
 
     // if (!romanNumerals.includes(s)) {
     //     console.log('That\'s not a Roman numeral!');
