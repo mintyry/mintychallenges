@@ -40,7 +40,7 @@ var romanToInt = function (s) {
 // check if s exists in object, use bracket notation and it will look is s is any of the keys; it it does not, it will be undefined
 // NEXT: how about if multiple characters like XIV?
 // maybe check if it typeof does not equal string instead of undefined
-    if ( romanNumerals[s] === undefined) {
+    if ( typeof romanNumerals[s] !== 'string') {
         console.log('this isn\'t a roman numeral!')
     } else {
  // corredctly evaluates inidividual roman numerals
