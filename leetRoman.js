@@ -39,19 +39,26 @@ var romanToInt = function (s) {
         };
 // check if s exists in object, use bracket notation and it will look is s is any of the keys; it it does not, it will be undefined
 // NEXT: how about if multiple characters like XIV?
+// maybe check if it typeof does not equal string instead of undefined
     if ( romanNumerals[s] === undefined) {
         console.log('this isn\'t a roman numeral!')
     } else {
  // corredctly evaluates inidividual roman numerals
         console.log(romanNumerals[s]);
-        return romanNumerals[s];
+        // return romanNumerals[s];
 // next, calculate multiple digit roman nums
+
+// from right to left, if value is bigger than character to the left, subtract; if smaller, add.
+// need to access character specifically. example: XIV
+// how do i target V?
+romanNumerals[s].charAt(romanNumerals.length - 1);
+
 
 // if the string entered has more than one character, follow logic
     }
 };
 
-romanToInt('V');
+romanToInt('XIV');
 
 
 
