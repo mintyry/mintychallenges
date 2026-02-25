@@ -55,11 +55,19 @@ var romanToInt = function (s) {
 console.log(`this is the last character: ${lastChar}`);
 // successfully found last character. need to loop to identify all characters, then check if they exist in the object.
 
-for (i = 1; i <= s.length; i++) {
+for (i = 0; i < s.length; i++) {
     // start at 1, because we want to first find the last character first, which would be length - 1
     // need <= because otherwise, this loop only runs while i is < 3, but on loop 3, i = 3 and is not less than 3 anymore.
-    let character = s.charAt(s.length - i)
+
+    // start with last char
+    // let character = s.charAt(s.length - i)
+
+    // start with first char
+    let character = s.charAt(i);
     console.log(`this is a character: ${character}`);
+
+    let romanArray = [];
+
 }
 
 // if the string entered has more than one character, follow logic
