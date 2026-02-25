@@ -38,13 +38,16 @@ var romanToInt = function (s) {
             'M': 1000
         };
 
-let romanArray = [];
+    let romanArray = [];
 // check if s exists in object, use bracket notation and it will look is s is any of the keys; it it does not, it will be undefined
 // NEXT: how about if multiple characters like XIV?
 // maybe check if it typeof does not equal string instead of undefined
     if ( typeof s !== 'string') {
         console.log('this isn\'t a roman numeral!')
     } else {
+// IF THIS IS A ROMAN NUMERAL...
+
+
  // corredctly evaluates inidividual roman numerals from object
         // console.log(romanNumerals[s]);
 
@@ -53,8 +56,10 @@ let romanArray = [];
 // from right to left, if value is bigger than character to the left, subtract; if smaller, add.
 // need to access character specifically. example: XIV
 // how do i target V?
-    const lastChar = s.charAt(s.length - 1);
-console.log(`this is the last character: ${lastChar}`);
+
+//     const lastChar = s.charAt(s.length - 1);
+// console.log(`this is the last character: ${lastChar}`);
+
 // successfully found last character. need to loop to identify all characters, then check if they exist in the object.
 
 for (i = 0; i < s.length; i++) {
@@ -72,6 +77,20 @@ for (i = 0; i < s.length; i++) {
 
     console.log('this is the array:');
     console.log(romanArray);
+
+    const lastNumeral = romanArray.length - 1; //index number
+    console.log(romanArray[lastNumeral]); // logs V
+
+    const lastChar = romanArray[lastNumeral];
+    console.log(lastChar);
+
+    console.log(`${lastChar} : ${romanNumerals[lastChar]}`);
+    
+
+    // if (romanArray[lastNumeral] > romanArray[lastNumeral - 1]) {
+    //     let subtracted = romanArray[lastNumeral] - romanArray[lastNumeral -1];
+    //     console.log(subtracted);
+    // }
 
 }
 
