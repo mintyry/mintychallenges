@@ -70,7 +70,8 @@ for (i = 0; i < s.length; i++) {
 
     romanArray.push(character);
 
-    console.log('this is the array ' + romanArray);
+    console.log('this is the array:');
+    console.log(romanArray);
 
 }
 
