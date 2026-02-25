@@ -68,6 +68,10 @@ for (i = 0; i < s.length; i++) {
 
     let romanArray = [];
 
+    romanArray.push(character);
+
+    console.log('this is the array ' + romanArray);
+
 }
 
 // if the string entered has more than one character, follow logic
