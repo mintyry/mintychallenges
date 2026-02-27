@@ -39,6 +39,7 @@ var romanToInt = function (s) {
         };
 
     let romanArray = [];
+    let arabicArray = [];
 // check if s exists in object, use bracket notation and it will look is s is any of the keys; it it does not, it will be undefined
 // NEXT: how about if multiple characters like XIV?
 // maybe check if it typeof does not equal string instead of undefined
@@ -71,9 +72,12 @@ for (i = 0; i < s.length; i++) {
 
     // start with first char
     let character = s.charAt(i);
+    let num = romanNumerals[character];
     console.log(`this is a character: ${character}`);
+    console.log(`this is a number: ${num}`);
 
     romanArray.push(character);
+    arabicArray.push(num);
 
     console.log('this is the array:');
     console.log(romanArray);
