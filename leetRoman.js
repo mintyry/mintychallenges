@@ -93,9 +93,6 @@ for (i = 0; i < s.length; i++) {
     // now i need to fhceck
 
 
-const lastNumIndex = arabicArray.length - 1; 
-    const lastNumber = arabicArray[lastNumIndex];
-
     // if (romanArray[lastNumeral] > romanArray[lastNumeral - 1]) {
     //     let subtracted = romanArray[lastNumeral] - romanArray[lastNumeral -1];
     //     console.log(subtracted);
@@ -103,6 +100,8 @@ const lastNumIndex = arabicArray.length - 1;
 
 }
  console.log (`second loop has the arabic array: ${arabicArray}`)
+    const lastNumIndex = arabicArray.length - 1; 
+    const lastNumber = arabicArray[lastNumIndex];
     // need to loop through arabic array, backwards? maybe not
     // try to loop forward
    
