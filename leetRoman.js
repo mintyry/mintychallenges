@@ -94,7 +94,6 @@ for (i = 0; i < s.length; i++) {
     const lastNum = arabicArray.length - 1; //index number (eg: 10, 1, 5, length is 3; 3 - 1 is index 2, so lastNum is 5)
     const lastNumber = arabicArray[lastNum];
 
-    
 
     // if (romanArray[lastNumeral] > romanArray[lastNumeral - 1]) {
     //     let subtracted = romanArray[lastNumeral] - romanArray[lastNumeral -1];
@@ -102,6 +101,20 @@ for (i = 0; i < s.length; i++) {
     // }
 
 }
+
+    // need to loop through arabic array, backwards? maybe not
+    // try to loop forward
+    for (i = 0; i < arabicArray.length; i++) {
+        if (arabicArray[i] > arabicArray[i + 1]) {
+
+            console.log(arabicArray[i] + arabicArray[i + 1])
+
+        } else if (arabicArray[i] < arabicArray[i + 1]){
+
+            console.log(arabicArray[i + 1] - arabicArray[i])
+
+        }
+    };
 
 // if the string entered has more than one character, follow logic
     }
