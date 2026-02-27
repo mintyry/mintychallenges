@@ -81,14 +81,19 @@ for (i = 0; i < s.length; i++) {
 
     console.log('this is the array:');
     console.log(romanArray);
+    console.log(arabicArray);
 
-    const lastNumeral = romanArray.length - 1; //index number
-    console.log(romanArray[lastNumeral]); // logs V
-
+    // maybe dont need to use array of characters anymore
+    const lastNumeral = romanArray.length - 1; //index number 
     const lastChar = romanArray[lastNumeral];
-    console.log(lastChar);
-
+    console.log(lastChar); //logs V
     console.log(`${lastChar} : ${romanNumerals[lastChar]}`);
+
+    // now i need to fhceck
+
+    const lastNum = arabicArray.length - 1; //index number (eg: 10, 1, 5, length is 3; 3 - 1 is index 2, so lastNum is 5)
+    const lastNumber = arabicArray[lastNum];
+
     
 
     // if (romanArray[lastNumeral] > romanArray[lastNumeral - 1]) {
