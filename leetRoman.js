@@ -101,13 +101,13 @@ for (i = 0; i < s.length; i++) {
 }
  console.log (`second loop has the arabic array: ${arabicArray}`)
     const lastNumIndex = arabicArray.length - 1; 
-    const lastNumber = arabicArray[lastNumIndex];
-        let finalAnswer = 0;
+    // const lastNumber = arabicArray[lastNumIndex];
+        let finalAnswer =  arabicArray[lastNumIndex];
     // need to loop through arabic array, backwards? 
    
-    for (i = lastNumIndex; i >= 0; i--) {
+    for (i = lastNumIndex - 1; i >= 0; i--) {
     
-        if (arabicArray[i] >= arabicArray[i - 1]) {
+        if (arabicArray[i] >= arabicArray[i + 1]) {
 
         //      let diff = arabicArray[i] - arabicArray[i - 1];
         //     console.log(diff);
@@ -118,9 +118,9 @@ for (i = 0; i < s.length; i++) {
         //    finalAnswer += diff;
         //    console.log('uh ' + finalAnswer);
         
-        finalAnswer -= arabicArray[i];
+        finalAnswer += arabicArray[i];
 
-        } else if (arabicArray[i] < arabicArray[i - 1]){
+        } else {
 
            
             // let total = arabicArray[i] + arabicArray[i - 1];
@@ -130,12 +130,12 @@ for (i = 0; i < s.length; i++) {
             //     console.log('this is the new arabic array: ' + arabicArray);
             //     finalAnswer += total;
             //      console.log('huh ' + finalAnswer);
-            finalAnswer += arabicArray[i];
+            finalAnswer -= arabicArray[i];
         }
     };
 // console.log(`${s} is ${arabicArray[0]}`);
 console.log(finalAnswer);
-// when this is all correct, return arabicArray[0]
+return finalAnswer;
     }
 };
 
