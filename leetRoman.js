@@ -43,38 +43,16 @@ var romanToInt = function (s) {
             'M': 1000
         };
 
-    // let romanArray = [];
     let arabicArray = [];
-//index number (eg: 10, 1, 5, length is 3; 3 - 1 is index 2, so lastNum is 5)
-// check if s exists in object, use bracket notation and it will look is s is any of the keys; it it does not, it will be undefined
-// NEXT: how about if multiple characters like XIV?
 // maybe check if it typeof does not equal string instead of undefined
     if ( typeof s !== 'string') {
         console.log('this isn\'t a roman numeral!')
     } else {
 // IF THIS IS A ROMAN NUMERAL...
 
-
- // corredctly evaluates inidividual roman numerals from object
-        // console.log(romanNumerals[s]);
-
-// next, calculate multiple digit roman nums
-
-// from right to left, if value is bigger than character to the left, subtract; if smaller, add.
-// need to access character specifically. example: XIV
-// how do i target V?
-
-//     const lastChar = s.charAt(s.length - 1);
-// console.log(`this is the last character: ${lastChar}`);
-
-// successfully found last character. need to loop to identify all characters, then check if they exist in the object.
-
 for (i = 0; i < s.length; i++) {
-    // start at 1, because we want to first find the last character first, which would be length - 1
-    // need <= because otherwise, this loop only runs while i is < 3, but on loop 3, i = 3 and is not less than 3 anymore.
-
-    // start with last char
     // let character = s.charAt(s.length - i)
+    // successfully found last character. need to loop to identify all characters, then check if they exist in the object.
 
     // start with first char
     let character = s.charAt(i);
@@ -85,62 +63,18 @@ for (i = 0; i < s.length; i++) {
     // romanArray.push(character);
     arabicArray.push(num);
 
-    console.log('this is the array:');
-    // console.log(romanArray);
-    console.log(arabicArray);
-
-    // maybe dont need to use array of characters anymore
-    // const lastNumeral = romanArray.length - 1;
-     //index number 
-    // const lastChar = romanArray[lastNumeral];
-    // console.log(lastChar); 
-    //logs V
-    // console.log(`${lastChar} : ${romanNumerals[lastChar]}`);
-
-    // now i need to fhceck
-
-
-    // if (romanArray[lastNumeral] > romanArray[lastNumeral - 1]) {
-    //     let subtracted = romanArray[lastNumeral] - romanArray[lastNumeral -1];
-    //     console.log(subtracted);
-    // }
-
+    console.log('this is the array: ' + arabicArray);
 }
- console.log (`arabic array: ${arabicArray}`)
     const lastNumIndex = arabicArray.length - 1; 
-    // const lastNumber = arabicArray[lastNumIndex];
-        let finalAnswer =  arabicArray[lastNumIndex];
-    // need to loop through arabic array, backwards? 
-   
+    let finalAnswer =  arabicArray[lastNumIndex];
+
     for (i = lastNumIndex - 1; i >= 0; i--) {
-    
         if (arabicArray[i] >= arabicArray[i + 1]) {
-
-        //      let diff = arabicArray[i] - arabicArray[i - 1];
-        //     console.log(diff);
-        //     let secondToLast = i-1;
-        //     // once sum or difference is found, must replace the 2 values by the new answer
-        //    let newArabicArr = arabicArray.splice(secondToLast, 2, diff);
-        //    console.log('this is the new arabic array: ' + arabicArray);
-        //    finalAnswer += diff;
-        //    console.log('uh ' + finalAnswer);
-        
         finalAnswer += arabicArray[i];
-
         } else {
-
-           
-            // let total = arabicArray[i] + arabicArray[i - 1];
-            //  console.log(total);
-            //  let secondToLast = i-1;
-            //     let newArabicArr = arabicArray.splice(secondToLast, 2, total);
-            //     console.log('this is the new arabic array: ' + arabicArray);
-            //     finalAnswer += total;
-            //      console.log('huh ' + finalAnswer);
             finalAnswer -= arabicArray[i];
         }
     };
-// console.log(`${s} is ${arabicArray[0]}`);
 console.log(finalAnswer);
 return finalAnswer;
     }
