@@ -31,7 +31,9 @@
 // try establishing a baseline first to add to the finalAnswer
 
 // you can deconstruct a string into an array
-//.every() method like map...
+//.every() method like map, but for checks, returns boolean; .map() transforms
+
+// regarding finalAnswer: So instead of trying to compute everything from zero, you can ask: “What value is definitely correct no matter what? -- WHAT IS GUANRATEED?” The last numeral will always be added, so start with that.
 
 
 
