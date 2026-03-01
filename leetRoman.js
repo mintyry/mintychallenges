@@ -33,6 +33,7 @@
 
 
 var romanToInt = function (s) {
+    // establish key value pairs for roman numeral
       const romanNumerals = {
             'I': 1,
             'V': 5,
@@ -42,36 +43,40 @@ var romanToInt = function (s) {
             'D': 500,
             'M': 1000
         };
-
+    // make array to eventually add numeric values into
     let arabicArray = [];
-// maybe check if it typeof does not equal string instead of undefined
+    // make sure we are even receiving a roman numeral
     if ( typeof s !== 'string') {
         console.log('this isn\'t a roman numeral!')
     } else {
 // IF THIS IS A ROMAN NUMERAL...
 
+// loop through the string
 for (i = 0; i < s.length; i++) {
-    // let character = s.charAt(s.length - i)
-    // successfully found last character. need to loop to identify all characters, then check if they exist in the object.
 
-    // start with first char
+    // find each character of the string, starting with the first one
     let character = s.charAt(i);
+    // find the character in the romanNumerals object and find its numeric value
     let num = romanNumerals[character];
-    console.log(`this is a character: ${character}`);
-    console.log(`this is a number: ${num}`);
+    // console.log(`this is a character: ${character}`);
+    // console.log(`this is a number: ${num}`);
 
-    // romanArray.push(character);
+    // add number to the array (push adds to the end of array)
     arabicArray.push(num);
-
-    console.log('this is the array: ' + arabicArray);
+    //  console.log('this is the array: ' + arabicArray);
 }
+    // this is the index of the last number
     const lastNumIndex = arabicArray.length - 1; 
-    let finalAnswer =  arabicArray[lastNumIndex];
-
+    // establish baseline value, which will be the last number in the array (eg: XIV, lastNumIndex is 2, 5 is the value at index 2)
+    // from here, we will add or subtract from this value
+    let finalAnswer = arabicArray[lastNumIndex];
+    // start by checking second to last index, keep running until the first index, go backwards with i--
     for (i = lastNumIndex - 1; i >= 0; i--) {
+        // if the current index value is greater or equal to the value of the index after it, add this value to finalAnswer
         if (arabicArray[i] >= arabicArray[i + 1]) {
         finalAnswer += arabicArray[i];
         } else {
+        // if current index is less than the value to its right, subtract from the finalAnswer
             finalAnswer -= arabicArray[i];
         }
     };
