@@ -102,35 +102,39 @@ for (i = 0; i < s.length; i++) {
  console.log (`second loop has the arabic array: ${arabicArray}`)
     const lastNumIndex = arabicArray.length - 1; 
     const lastNumber = arabicArray[lastNumIndex];
+        let finalAnswer = 0;
     // need to loop through arabic array, backwards? 
    
-    for (i = lastNumIndex; i > 0; i--) {
-       let finalAnswer = 0;
+    for (i = lastNumIndex; i >= 0; i--) {
     
-        if (arabicArray[i] > arabicArray[i - 1]) {
+        if (arabicArray[i] >= arabicArray[i - 1]) {
 
-             let diff = arabicArray[i] - arabicArray[i - 1];
-            console.log(diff);
-            let secondToLast = i-1;
-            // once sum or difference is found, must replace the 2 values by the new answer
-           let newArabicArr = arabicArray.splice(secondToLast, 2, diff);
-           console.log('this is the new arabic array: ' + arabicArray);
-           finalAnswer += diff;
-           console.log('uh ' + finalAnswer);
+        //      let diff = arabicArray[i] - arabicArray[i - 1];
+        //     console.log(diff);
+        //     let secondToLast = i-1;
+        //     // once sum or difference is found, must replace the 2 values by the new answer
+        //    let newArabicArr = arabicArray.splice(secondToLast, 2, diff);
+        //    console.log('this is the new arabic array: ' + arabicArray);
+        //    finalAnswer += diff;
+        //    console.log('uh ' + finalAnswer);
+        
+        finalAnswer -= arabicArray[i];
 
-        } else if (arabicArray[i] <= arabicArray[i - 1]){
+        } else if (arabicArray[i] < arabicArray[i - 1]){
 
            
-            let total = arabicArray[i] + arabicArray[i - 1];
-             console.log(total);
-             let secondToLast = i-1;
-                let newArabicArr = arabicArray.splice(secondToLast, 2, total);
-                console.log('this is the new arabic array: ' + arabicArray);
-                finalAnswer += total;
-                 console.log('huh ' + finalAnswer);
+            // let total = arabicArray[i] + arabicArray[i - 1];
+            //  console.log(total);
+            //  let secondToLast = i-1;
+            //     let newArabicArr = arabicArray.splice(secondToLast, 2, total);
+            //     console.log('this is the new arabic array: ' + arabicArray);
+            //     finalAnswer += total;
+            //      console.log('huh ' + finalAnswer);
+            finalAnswer += arabicArray[i];
         }
     };
-console.log(`${s} is ${arabicArray[0]}`);
+// console.log(`${s} is ${arabicArray[0]}`);
+console.log(finalAnswer);
 // when this is all correct, return arabicArray[0]
     }
 };
