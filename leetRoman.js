@@ -118,11 +118,14 @@ for (i = 0; i < s.length; i++) {
 
         } else if (arabicArray[i] <= arabicArray[i - 1]){
 
-            console.log(arabicArray[i] + arabicArray[i - 1])
-
+           
+            let total = arabicArray[i] + arabicArray[i - 1];
+             console.log(total);
+             let secondToLast = i-1;
+                let newArabicArr = arabicArray.splice(secondToLast, 2, total);
         }
     };
-
+console.log(`${s} is ${arabicArray[0]}`);
 // if the string entered has more than one character, follow logic
     }
 };
