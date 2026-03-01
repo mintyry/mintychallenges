@@ -102,8 +102,7 @@ for (i = 0; i < s.length; i++) {
  console.log (`second loop has the arabic array: ${arabicArray}`)
     const lastNumIndex = arabicArray.length - 1; 
     const lastNumber = arabicArray[lastNumIndex];
-    // need to loop through arabic array, backwards? maybe not
-    // try to loop forward
+    // need to loop through arabic array, backwards? 
    
     for (i = lastNumIndex; i >= 0; i--) {
        
@@ -112,7 +111,7 @@ for (i = 0; i < s.length; i++) {
 
             console.log(arabicArray[i] - arabicArray[i - 1])
 
-        } else if (arabicArray[i] < arabicArray[i - 1]){
+        } else if (arabicArray[i] <= arabicArray[i - 1]){
 
             console.log(arabicArray[i] + arabicArray[i - 1])
 
