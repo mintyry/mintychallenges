@@ -35,6 +35,16 @@
 
 // regarding finalAnswer: So instead of trying to compute everything from zero, you can ask: “What value is definitely correct no matter what? -- WHAT IS GUANRATEED?” The last numeral will always be added, so start with that.
 
+// FOR MORE EFFICIENT SOLUTION:
+
+// you can use bracket notation on a string!
+
+// You’re building a total value step by step.
+// You start with nothing, then add or subtract numbers as you read each symbol.
+// This naturally suggests: we need a variable to accumulate the answer.
+// That’s why total = 0 is a natural starting point.
+// You’re “starting with zero and building up” — a very common mindset in programming.
+
 
 
 var romanToInt = function (s) {
