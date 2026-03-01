@@ -25,6 +25,11 @@
 //   console.log("It's a boolean");
 // }
 
+// charAt checks value of index in a string
+// fromEntries() turns an array of [key, value] pairs back into an object.
+// entries() turns an object into an array of key, value pairs
+// try establishing a baseline first to add to the finalAnswer
+
 
 
 var romanToInt = function (s) {
@@ -38,7 +43,7 @@ var romanToInt = function (s) {
             'M': 1000
         };
 
-    let romanArray = [];
+    // let romanArray = [];
     let arabicArray = [];
 //index number (eg: 10, 1, 5, length is 3; 3 - 1 is index 2, so lastNum is 5)
 // check if s exists in object, use bracket notation and it will look is s is any of the keys; it it does not, it will be undefined
@@ -77,18 +82,20 @@ for (i = 0; i < s.length; i++) {
     console.log(`this is a character: ${character}`);
     console.log(`this is a number: ${num}`);
 
-    romanArray.push(character);
+    // romanArray.push(character);
     arabicArray.push(num);
 
     console.log('this is the array:');
-    console.log(romanArray);
+    // console.log(romanArray);
     console.log(arabicArray);
 
     // maybe dont need to use array of characters anymore
-    const lastNumeral = romanArray.length - 1; //index number 
-    const lastChar = romanArray[lastNumeral];
-    console.log(lastChar); //logs V
-    console.log(`${lastChar} : ${romanNumerals[lastChar]}`);
+    // const lastNumeral = romanArray.length - 1;
+     //index number 
+    // const lastChar = romanArray[lastNumeral];
+    // console.log(lastChar); 
+    //logs V
+    // console.log(`${lastChar} : ${romanNumerals[lastChar]}`);
 
     // now i need to fhceck
 
@@ -99,7 +106,7 @@ for (i = 0; i < s.length; i++) {
     // }
 
 }
- console.log (`second loop has the arabic array: ${arabicArray}`)
+ console.log (`arabic array: ${arabicArray}`)
     const lastNumIndex = arabicArray.length - 1; 
     // const lastNumber = arabicArray[lastNumIndex];
         let finalAnswer =  arabicArray[lastNumIndex];
