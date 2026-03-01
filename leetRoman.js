@@ -104,7 +104,7 @@ for (i = 0; i < s.length; i++) {
     const lastNumber = arabicArray[lastNumIndex];
     // need to loop through arabic array, backwards? 
    
-    for (i = lastNumIndex; i >= 0; i--) {
+    for (i = lastNumIndex; i > 0; i--) {
        
     
         if (arabicArray[i] > arabicArray[i - 1]) {
@@ -123,10 +123,11 @@ for (i = 0; i < s.length; i++) {
              console.log(total);
              let secondToLast = i-1;
                 let newArabicArr = arabicArray.splice(secondToLast, 2, total);
+                console.log('this is the new arabic array: ' + arabicArray);
         }
     };
 console.log(`${s} is ${arabicArray[0]}`);
-// if the string entered has more than one character, follow logic
+// when this is all correct, return arabicArray[0]
     }
 };
 
