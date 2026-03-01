@@ -109,7 +109,12 @@ for (i = 0; i < s.length; i++) {
     
         if (arabicArray[i] > arabicArray[i - 1]) {
 
-            console.log(arabicArray[i] - arabicArray[i - 1])
+             let diff = arabicArray[i] - arabicArray[i - 1];
+            console.log(diff);
+            let secondToLast = i-1;
+            // once sum or difference is found, must replace the 2 values by the new answer
+           let newArabicArr = arabicArray.splice(secondToLast, 2, diff);
+           console.log('this is the new arabic array: ' + arabicArray);
 
         } else if (arabicArray[i] <= arabicArray[i - 1]){
 
